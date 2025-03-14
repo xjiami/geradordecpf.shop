@@ -1,0 +1,68 @@
+/* 
+   Dark Mode CSS - 暗黑模式样式
+   与main.css配合使用
+*/
+
+/* 暗黑模式变量 */
+[data-theme="dark"] {
+  /* 颜色变量 - 暗色模式 */
+  --color-primary: #0A84FF; /* 暗色模式下的苹果蓝 */
+  --color-secondary: #64D2FF;
+  --color-success: #30D158;
+  --color-danger: #FF453A;
+  --color-warning: #FFD60A;
+  --color-info: #5E5CE6;
+  
+  --color-background: #1A1A1A;
+  --color-card: #2C2C2E;
+  --color-border: #3A3A3C;
+  
+  --color-text-primary: #F5F5F7;
+  --color-text-secondary: #EBEBF0;
+  --color-text-tertiary: #D1D1D6;
+  
+  /* 阴影调整 */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.2), 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* 暗黑模式下的特定样式调整 */
+[data-theme="dark"] .form-control {
+  background-color: #1C1C1E;
+}
+
+[data-theme="dark"] .result-container {
+  background-color: #1C1C1E;
+}
+
+[data-theme="dark"] .theme-toggle {
+  background-color: #2C2C2E;
+  color: var(--color-primary);
+}
+
+/* 暗黑模式过渡动画 */
+body {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card, .btn, .form-control, .result-container {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 暗黑模式图标调整 */
+[data-theme="dark"] .sun-icon {
+  display: block;
+}
+
+[data-theme="dark"] .moon-icon {
+  display: none;
+}
+
+.sun-icon {
+  display: none;
+}
+
+.moon-icon {
+  display: block;
+}

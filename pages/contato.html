@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Entre em contato com a equipe do geradordecpf.shop - Gerador de Documentos Brasileiros">
+    <meta name="keywords" content="Contato,geradordecpf.shop,Documentos Brasileiros,Suporte">
+    <meta name="author" content="geradordecpf.shop">
+    <title>Contato - geradordecpf.shop</title>
+    
+    <!-- Ícone do site -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo"><a href="../index.html">Geradordecpf.Shop</a></div>
+                <nav>
+                    <ul class="d-flex">
+                        <li><a href="../index.html#generators" class="btn btn-sm">Geradores</a></li>
+                        <li><a href="../index.html#validators" class="btn btn-sm">Validadores</a></li>
+                        <li><a href="../index.html#about" class="btn btn-sm">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-content">
+                <div class="page-title">
+                    <h1>Contato</h1>
+                    <p>Entre em contato com nossa equipe</p>
+                </div>
+                
+                <div class="page-section">
+                    <h3>Formulário de Contato</h3>
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Assunto</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensagem</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                    </form>
+                </div>
+                
+                <div class="page-section">
+                    <h3>Informações de Contato</h3>
+                    <p>Se preferir, você também pode entrar em contato conosco através dos seguintes canais:</p>
+                    
+                    <ul class="mt-3">
+                        <li class="mb-2"><strong>E-mail:</strong> xjiami135@gmail.com</li>
+                        <li class="mb-2"><strong>GitHub:</strong> <a href="https://github.com/geradordecpf.shop" target="_blank">github.com/geradordecpf.shop</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div>
+                    <p>&copy; 2025 geradordecpf.shop. Todos os direitos reservados.</p>
+                </div>
+                <div>
+                    <p>Apenas para desenvolvimento e teste</p>
+                </div>
+            </div>
+            <div class="footer-links mt-3">
+                <ul class="d-flex flex-wrap justify-content-center">
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reportar.html">Reportar Erro ou Sugestão</a></li>
+                    <li><a href="duvidas.html">Dúvidas Frequentes</a></li>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botão de alternar tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="moon-icon">🌙</span>
+        <span class="sun-icon">☀️</span>
+    </button>
+    
+    <!-- Arquivos JavaScript -->
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/app.js"></script>
+    
+    <script>
+        // Inicializar tema
+        document.addEventListener('DOMContentLoaded', () => {
+            window.app.initTheme();
+            
+            // Manipulador do formulário de contato
+            const contactForm = document.getElementById('contact-form');
+            if (contactForm) {
+                contactForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Obrigado pelo seu contato! Em um ambiente de produção, esta mensagem seria enviada para nosso servidor.');
+                    contactForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

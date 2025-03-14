@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Reportar erros ou enviar sugestões para o geradordecpf.shop - Gerador de Documentos Brasileiros">
+    <meta name="keywords" content="Reportar Erro,Sugestão,geradordecpf.shop,Documentos Brasileiros,Feedback">
+    <meta name="author" content="geradordecpf.shop">
+    <title>Reportar Erro ou Sugestão - geradordecpf.shop</title>
+    
+    <!-- Ícone do site -->
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <link rel="stylesheet" href="../assets/css/dark-mode.css">
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo"><a href="../index.html">Geradordecpf.Shop</a></div>
+                <nav>
+                    <ul class="d-flex">
+                        <li><a href="../index.html#generators" class="btn btn-sm">Geradores</a></li>
+                        <li><a href="../index.html#validators" class="btn btn-sm">Validadores</a></li>
+                        <li><a href="../index.html#about" class="btn btn-sm">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <div class="container">
+            <div class="page-content">
+                <div class="page-title">
+                    <h1>Reportar Erro ou Sugestão</h1>
+                    <p>Ajude-nos a melhorar o geradordecpf.shop</p>
+                </div>
+                
+                <div class="page-section">
+                    <h3>Formulário de Reporte</h3>
+                    <form class="contact-form" id="report-form">
+                        <div class="form-group">
+                            <label for="name">Nome</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">E-mail</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="report-type">Tipo de Reporte</label>
+                            <select id="report-type" name="report-type" required>
+                                <option value="">Selecione uma opção</option>
+                                <option value="error">Erro no site</option>
+                                <option value="algorithm">Erro no algoritmo de geração/validação</option>
+                                <option value="suggestion">Sugestão de melhoria</option>
+                                <option value="feature">Solicitação de novo recurso</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="document-type">Tipo de Documento (se aplicável)</label>
+                            <select id="document-type" name="document-type">
+                                <option value="">Selecione uma opção</option>
+                                <option value="cpf">CPF</option>
+                                <option value="cnpj">CNPJ</option>
+                                <option value="rg">RG</option>
+                                <option value="pis">PIS/PASEP</option>
+                                <option value="cnh">CNH</option>
+                                <option value="titulo">Título de Eleitor</option>
+                                <option value="other">Outro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="description">Descrição detalhada</label>
+                            <textarea id="description" name="description" required placeholder="Descreva o erro ou sugestão com o máximo de detalhes possível. Se for um erro, informe os passos para reproduzi-lo."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary">Enviar Reporte</button>
+                    </form>
+                </div>
+                
+                <div class="page-section">
+                    <h3>Contribua no GitHub</h3>
+                    <p>O geradordecpf.shop é um projeto de código aberto. Se você é desenvolvedor, pode contribuir diretamente através do nosso repositório no GitHub:</p>
+                    
+                    <ul class="mt-3">
+                        <li class="mb-2"><a href="https://github.com/geradornv" target="_blank">Repositório do geradordecpf.shop</a></li>
+                        <li class="mb-2"><a href="https://github.com/geradornv/issues/new" target="_blank">Abrir uma Issue no GitHub</a></li>
+                        <li class="mb-2"><a href="https://github.com/geradornv/pulls" target="_blank">Enviar um Pull Request</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div>
+                    <p>&copy; 2025 geradordecpf.shop. Todos os direitos reservados.</p>
+                </div>
+                <div>
+                    <p>Apenas para desenvolvimento e teste</p>
+                </div>
+            </div>
+            <div class="footer-links mt-3">
+                <ul class="d-flex flex-wrap justify-content-center">
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="reportar.html">Reportar Erro ou Sugestão</a></li>
+                    <li><a href="duvidas.html">Dúvidas Frequentes</a></li>
+                    <li><a href="termos.html">Termos de Uso</a></li>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botão de alternar tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <span class="moon-icon">🌙</span>
+        <span class="sun-icon">☀️</span>
+    </button>
+    
+    <!-- Arquivos JavaScript -->
+    <script src="../assets/js/utils.js"></script>
+    <script src="../assets/js/app.js"></script>
+    
+    <script>
+        // Inicializar tema
+        document.addEventListener('DOMContentLoaded', () => {
+            window.app.initTheme();
+            
+            // Manipulador do formulário de reporte
+            const reportForm = document.getElementById('report-form');
+            if (reportForm) {
+                reportForm.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    alert('Obrigado pelo seu reporte! Em um ambiente de produção, este reporte seria enviado para nossa equipe de desenvolvimento.');
+                    reportForm.reset();
+                });
+            }
+        });
+    </script>
+</body>
+</html>

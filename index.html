@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gerador de documentos brasileiros para testes de sistemas">
+    <meta name="keywords" content="Gerador de Documentos Brasileiros,Gerador de CPF,Gerador de CNPJ,Gerador de RG,Gerador de PIS/PASEP,Gerador de CNH,Gerador de Título de Eleitor,Validador de documentos,Dados de teste">
+    <meta name="author" content="geradordecpf.shop">
+    <title>Geradordecpf.Shop - Gerador de Documentos Brasileiros</title>
+    
+    <!-- Ícone do site -->
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="/assets/css/reset.css">
+    <link rel="stylesheet" href="/assets/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/assets/css/dark-mode.css">
+    
+    <!-- Dados estruturados (Schema.org) -->
+    <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebApplication",
+      "name": "Geradordecpf.Shop",
+      "url": "https://geradordecpf.shop",
+      "description": "Gerador de Documentos Brasileiros - Gere CPF, CNPJ, RG, PIS/PASEP, CNH e Título de Eleitor válidos para testes e desenvolvimento",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Cabeçalho -->
+    <header class="header">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center">
+                <div class="logo">Geradordecpf.Shop</div>
+                <nav>
+                    <ul class="d-flex">
+                        <li><a href="#generators" class="btn btn-sm">Geradores</a></li>
+                        <li><a href="#validators" class="btn btn-sm">Validadores</a></li>
+                        <li><a href="#about" class="btn btn-sm">Sobre</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Conteúdo principal -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Seção de introdução -->
+            <section class="mb-5">
+                <div class="text-center mb-4">
+                    <h1>Gerador de Documentos Brasileiros</h1>
+                    <p class="mb-3">Gere documentos brasileiros válidos para desenvolvimento e testes</p>
+                </div>
+            </section>
+            
+            <!-- Seção de geradores -->
+            <section id="generators" class="mb-5">
+                <h2 class="mb-4">Geradores de Documentos</h2>
+                
+                <!-- Navegação por abas -->
+                <div class="tab-container">
+                    <div class="tab-buttons">
+                        <button class="tab-btn active" data-target="cpf-tab">Gerador de CPF</button>
+                        <button class="tab-btn" data-target="cnpj-tab">Gerador de CNPJ</button>
+                        <button class="tab-btn" data-target="rg-tab">Gerador de RG</button>
+                        <button class="tab-btn" data-target="pis-tab">Gerador de PIS/PASEP</button>
+                        <button class="tab-btn" data-target="cnh-tab">Gerador de CNH</button>
+                        <button class="tab-btn" data-target="titulo-tab">Gerador de Título de Eleitor</button>
+                        <button class="tab-btn" data-target="certidao-tab">Gerador de Certidão de Nascimento</button>
+                        <button class="tab-btn" data-target="cartao-tab">Gerador de Cartão de Crédito</button>
+                        <button class="tab-btn" data-target="renavam-tab">Gerador de RENAVAM</button>
+                        <button class="tab-btn" data-target="profile-tab">Gerador de Perfil</button>
+                        <button class="tab-btn" data-target="bulk-tab">Geração em Massa</button>
+                    </div>
+                    
+                    <!-- Aba do gerador de CPF -->
+                    <div id="cpf-tab" class="tab-content active">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de CPF</h3>
+                            </div>
+                            <p>CPF (Cadastro de Pessoas Físicas) é o número de identificação fiscal para pessoas físicas no Brasil, composto por 11 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="cpf-formatted" checked>
+                                    <label for="cpf-formatted" class="mb-0 ml-2">Saída formatada (XXX.XXX.XXX-XX)</label>
+                                </div>
+                                <button id="generate-cpf" class="btn btn-primary">Gerar CPF</button>
+                            </div>
+                            
+                            <div class="result-container" id="cpf-result">Clique no botão para gerar CPF</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="cpf-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="cpf-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="cpf-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="cpf-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de CNPJ -->
+                    <div id="cnpj-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de CNPJ</h3>
+                            </div>
+                            <p>CNPJ (Cadastro Nacional da Pessoa Jurídica) é o número de identificação fiscal para empresas no Brasil, composto por 14 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="cnpj-formatted" checked>
+                                    <label for="cnpj-formatted" class="mb-0 ml-2">Saída formatada (XX.XXX.XXX/XXXX-XX)</label>
+                                </div>
+                                <button id="generate-cnpj" class="btn btn-primary">Gerar CNPJ</button>
+                            </div>
+                            
+                            <div class="result-container" id="cnpj-result">Clique no botão para gerar CNPJ</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="cnpj-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="cnpj-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="cnpj-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="cnpj-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de RG -->
+                    <div id="rg-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de RG</h3>
+                            </div>
+                            <p>RG (Registro Geral) é o documento de identidade brasileiro, geralmente composto por 9 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="rg-formatted" checked>
+                                    <label for="rg-formatted" class="mb-0 ml-2">Saída formatada (XX.XXX.XXX-X)</label>
+                                </div>
+                                <button id="generate-rg" class="btn btn-primary">Gerar RG</button>
+                            </div>
+                            
+                            <div class="result-container" id="rg-result">Clique no botão para gerar RG</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="rg-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="rg-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="rg-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="rg-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de PIS/PASEP -->
+                    <div id="pis-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de PIS/PASEP</h3>
+                            </div>
+                            <p>PIS/PASEP é o número de identificação do trabalhador brasileiro, composto por 11 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="pis-formatted" checked>
+                                    <label for="pis-formatted" class="mb-0 ml-2">Saída formatada (XXX.XXXXX.XX-X)</label>
+                                </div>
+                                <button id="generate-pis" class="btn btn-primary">Gerar PIS/PASEP</button>
+                            </div>
+                            
+                            <div class="result-container" id="pis-result">Clique no botão para gerar PIS/PASEP</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="pis-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="pis-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="pis-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="pis-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de CNH -->
+                    <div id="cnh-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de CNH</h3>
+                            </div>
+                            <p>CNH (Carteira Nacional de Habilitação) é a carteira de motorista brasileira, composta por 11 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="cnh-formatted" checked>
+                                    <label for="cnh-formatted" class="mb-0 ml-2">Saída formatada</label>
+                                </div>
+                                <button id="generate-cnh" class="btn btn-primary">Gerar CNH</button>
+                            </div>
+                            
+                            <div class="result-container" id="cnh-result">Clique no botão para gerar CNH</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="cnh-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="cnh-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="cnh-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="cnh-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de Título de Eleitor -->
+                    <div id="titulo-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de Título de Eleitor</h3>
+                            </div>
+                            <p>Título de Eleitor é o documento para votação no Brasil, composto por 12 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="titulo-formatted" checked>
+                                    <label for="titulo-formatted" class="mb-0 ml-2">Saída formatada (XXXX.XXXX.XXXX)</label>
+                                </div>
+                                <button id="generate-titulo" class="btn btn-primary">Gerar Título de Eleitor</button>
+                            </div>
+                            
+                            <div class="result-container" id="titulo-result">Clique no botão para gerar Título de Eleitor</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="titulo-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="titulo-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="titulo-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="titulo-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de Certidão de Nascimento -->
+                    <div id="certidao-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de Certidão de Nascimento</h3>
+                            </div>
+                            <p>Certidão de Nascimento é o documento que registra o nascimento de uma pessoa, composto por 12 dígitos.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="certidao-formatted" checked>
+                                    <label for="certidao-formatted" class="mb-0 ml-2">Saída formatada (XXXXXXXXXX-XX)</label>
+                                </div>
+                                <button id="generate-certidao" class="btn btn-primary">Gerar Certidão de Nascimento</button>
+                            </div>
+                            
+                            <div class="result-container" id="certidao-result">Clique no botão para gerar Certidão de Nascimento</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="certidao-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="certidao-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="certidao-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="certidao-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de Cartão de Crédito -->
+                    <div id="cartao-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de Cartão de Crédito</h3>
+                            </div>
+                            <p>Gere números de cartão de crédito válidos para testes de sistemas de pagamento.</p>
+                            
+                            <div class="form-group">
+                                <label for="cartao-type">Bandeira</label>
+                                <select id="cartao-type" class="form-control">
+                                    <option value="visa">Visa</option>
+                                    <option value="mastercard">Mastercard</option>
+                                    <option value="amex">American Express</option>
+                                    <option value="elo">Elo</option>
+                                    <option value="hipercard">Hipercard</option>
+                                    <option value="generic">Genérico</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="cartao-formatted" checked>
+                                    <label for="cartao-formatted" class="mb-0 ml-2">Saída formatada (XXXX XXXX XXXX XXXX)</label>
+                                </div>
+                                <button id="generate-cartao" class="btn btn-primary">Gerar Cartão de Crédito</button>
+                            </div>
+                            
+                            <div class="result-container" id="cartao-result">Clique no botão para gerar Cartão de Crédito</div>
+                            
+                            <div class="card-details mt-3" id="cartao-details" style="display: none;">
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Data de Validade</label>
+                                            <div class="result-container" id="cartao-expiry"></div>
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>CVV</label>
+                                            <div class="result-container" id="cartao-cvv"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Elemento oculto para armazenar todos os dados do cartão para cópia -->
+                                <div class="result-container" id="cartao-all" style="display: none;"></div>
+                            </div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="cartao-result">
+                                    <i class="fas fa-copy"></i> Copiar Número
+                                </button>
+                                <button class="btn btn-secondary copy-btn" data-target="cartao-all" id="copy-cartao-all" style="display: none;">
+                                    <i class="fas fa-copy"></i> Copiar Tudo
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="cartao-all">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="cartao-all">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="cartao-all">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de RENAVAM -->
+                    <div id="renavam-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de RENAVAM</h3>
+                            </div>
+                            <p>RENAVAM (Registro Nacional de Veículos Automotores) é o código de identificação único de veículos no Brasil.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="renavam-formatted" checked>
+                                    <label for="renavam-formatted" class="mb-0 ml-2">Saída formatada (XXXXX-XXXXXX)</label>
+                                </div>
+                                <button id="generate-renavam" class="btn btn-primary">Gerar RENAVAM</button>
+                            </div>
+                            
+                            <div class="result-container" id="renavam-result">Clique no botão para gerar RENAVAM</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="renavam-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="renavam-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="renavam-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="renavam-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba de geração em massa -->
+                    <div id="bulk-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Geração em Massa</h3>
+                            </div>
+                            <p>Gere múltiplos documentos de uma só vez.</p>
+                            
+                            <div class="form-group">
+                                <label for="bulk-type">Tipo de documento</label>
+                                <select id="bulk-type" class="form-control">
+                                    <option value="cpf">CPF</option>
+                                    <option value="cnpj">CNPJ</option>
+                                    <option value="rg">RG</option>
+                                    <option value="pis">PIS/PASEP</option>
+                                    <option value="cnh">CNH</option>
+                                    <option value="titulo">Título de Eleitor</option>
+                                    <option value="certidao">Certidão de Nascimento</option>
+                                    <option value="cartao">Cartão de Crédito</option>
+                                    <option value="renavam">RENAVAM</option>
+                                    <option value="profile">Perfil Completo</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="bulk-count">Quantidade</label>
+                                <input type="number" id="bulk-count" class="form-control" min="1" max="100" value="5">
+                            </div>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="bulk-formatted" checked>
+                                    <label for="bulk-formatted" class="mb-0 ml-2">Saída formatada</label>
+                                </div>
+                                <button id="bulk-generate" class="btn btn-primary">Gerar em Massa</button>
+                            </div>
+                            
+                            <div class="result-container" id="bulk-result">Clique no botão para gerar em massa</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="bulk-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="export-buttons">
+                                    <button id="export-csv" class="btn btn-secondary">
+                                        <i class="fas fa-file-csv"></i> CSV
+                                    </button>
+                                    <button id="export-excel" class="btn btn-secondary">
+                                        <i class="fas fa-file-excel"></i> Excel
+                                    </button>
+                                    <button id="export-json" class="btn btn-secondary">
+                                        <i class="fas fa-file-code"></i> JSON
+                                    </button>
+                                    <button id="export-txt" class="btn btn-secondary">
+                                        <i class="fas fa-file-alt"></i> TXT
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Aba do gerador de Perfil -->
+                    <div id="profile-tab" class="tab-content">
+                        <div class="card generator-card">
+                            <div class="generator-title">
+                                <h3>Gerador de Perfil</h3>
+                            </div>
+                            <p>Gere perfis de usuários fictícios para testes de sistemas.</p>
+                            
+                            <div class="form-group">
+                                <div class="d-flex align-items-center mb-2">
+                                    <input type="checkbox" id="profile-formatted" checked>
+                                    <label for="profile-formatted" class="mb-0 ml-2">Saída formatada</label>
+                                </div>
+                                <button id="generate-profile" class="btn btn-primary">Gerar Perfil</button>
+                            </div>
+                            
+                            <div class="result-container" id="profile-result">Clique no botão para gerar Perfil</div>
+                            
+                            <div class="action-buttons">
+                                <button class="btn btn-secondary copy-btn" data-target="profile-result">
+                                    <i class="fas fa-copy"></i> Copiar
+                                </button>
+                                <div class="export-buttons">
+                                    <button id="export-profile-csv" class="btn btn-secondary">
+                                        <i class="fas fa-file-csv"></i> CSV
+                                    </button>
+                                    <button id="export-profile-json" class="btn btn-secondary">
+                                        <i class="fas fa-file-code"></i> JSON
+                                    </button>
+                                </div>
+                                <div class="share-buttons">
+                                    <button class="btn btn-sm btn-social" data-platform="whatsapp" data-target="profile-result">
+                                        <i class="fab fa-whatsapp"></i> WhatsApp
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="telegram" data-target="profile-result">
+                                        <i class="fab fa-telegram-plane"></i> Telegram
+                                    </button>
+                                    <button class="btn btn-sm btn-social" data-platform="twitter" data-target="profile-result">
+                                        <i class="fab fa-twitter"></i> Twitter
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Seção de validadores -->
+            <section id="validators" class="mb-5">
+                <h2 class="mb-4">Validadores de Documentos</h2>
+                
+                <div class="card">
+                    <h3 class="mb-3">Validar Documento</h3>
+                    <p>Verifique se um número de documento é válido.</p>
+                    
+                    <form id="validate-form">
+                        <div class="form-group">
+                            <label for="validate-type">Tipo de documento</label>
+                            <select id="validate-type" class="form-control">
+                                <option value="cpf">CPF</option>
+                                <option value="cnpj">CNPJ</option>
+                                <option value="rg">RG</option>
+                                <option value="pis">PIS/PASEP</option>
+                                <option value="cnh">CNH</option>
+                                <option value="titulo">Título de Eleitor</option>
+                                <option value="certidao">Certidão de Nascimento</option>
+                                <option value="cartao">Cartão de Crédito</option>
+                                <option value="renavam">RENAVAM</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="validate-number">Número do documento</label>
+                            <input type="text" id="validate-number" class="form-control" placeholder="Digite o número do documento para validar">
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary validate-btn">
+                            <i class="fas fa-check-circle"></i> Validar
+                        </button>
+                    </form>
+                    
+                    <div class="mt-3" id="validate-result"></div>
+                </div>
+            </section>
+            
+            <!-- Seção sobre -->
+            <section id="about" class="mb-5">
+                <h2 class="mb-4">Sobre esta Ferramenta</h2>
+                
+                <div class="card">
+                    <h3 class="mb-3">Instruções de Uso</h3>
+                    <p>Esta ferramenta é usada para gerar números de documentos brasileiros válidos, principalmente para fins de desenvolvimento e teste. Todos os números gerados estão em conformidade com os algoritmos oficiais de verificação, mas não correspondem a pessoas ou empresas reais.</p>
+                    
+                    <h3 class="mt-4 mb-3">Aviso Legal</h3>
+                    <p>Esta ferramenta é apenas para desenvolvimento e teste. Não use os números de documentos gerados para fraude ou outros fins ilegais. O usuário é responsável por qualquer uso indevido dos números gerados.</p>
+                    
+                    <h3 class="mt-4 mb-3">Implementação Técnica</h3>
+                    <p>Este site é implementado com tecnologia frontend pura. Todos os cálculos são realizados no seu navegador e nenhum dado é enviado ao servidor.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <!-- Rodapé -->
+    <footer class="footer">
+        <div class="container">
+            <div class="d-flex justify-content-between align-items-center flex-wrap">
+                <div>
+                    <p>&copy; 2025 Geradordecpf.Shop. Todos os direitos reservados.</p>
+                </div>
+                <div>
+                    <p>Apenas para desenvolvimento e teste</p>
+                </div>
+            </div>
+            <div class="footer-links mt-3">
+                <ul class="d-flex flex-wrap justify-content-center">
+                    <li><a href="pages/contato.html">Contato</a></li>
+                    <li><a href="pages/reportar.html">Reportar Erro ou Sugestão</a></li>
+                    <li><a href="pages/duvidas.html">Dúvidas Frequentes</a></li>
+                    <li><a href="pages/termos.html">Termos de Uso</a></li>
+                    <li><a href="pages/privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="pages/sobre.html">Sobre</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- Botão de alternar tema -->
+    <button id="theme-toggle" class="theme-toggle" aria-label="Alternar tema">
+        <i class="fas fa-moon"></i>
+    </button>
+    
+    <!-- Arquivos JavaScript -->
+    <script src="/assets/js/utils.js"></script>
+    <script src="/assets/js/export-tools.js"></script>
+    <script src="/assets/js/generators/cpf.js"></script>
+    <script src="/assets/js/generators/cnpj.js"></script>
+    <script src="/assets/js/generators/rg.js"></script>
+    <script src="/assets/js/generators/pis.js"></script>
+    <script src="/assets/js/generators/cnh.js"></script>
+    <script src="/assets/js/generators/titulo.js"></script>
+    <script src="/assets/js/generators/certidao.js"></script>
+    <script src="/assets/js/generators/cartao.js"></script>
+    <script src="/assets/js/generators/renavam.js"></script>
+    <script src="/assets/js/generators/profile.js"></script>
+    <script src="/assets/js/validators/cpf.js"></script>
+    <script src="/assets/js/validators/cnpj.js"></script>
+    <script src="/assets/js/validators/rg.js"></script>
+    <script src="/assets/js/validators/pis.js"></script>
+    <script src="/assets/js/validators/cnh.js"></script>
+    <script src="/assets/js/validators/titulo.js"></script>
+    <script src="/assets/js/validators/certidao.js"></script>
+    <script src="/assets/js/validators/cartao.js"></script>
+    <script src="/assets/js/validators/renavam.js"></script>
+    <script src="/assets/js/update-icons.js"></script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>
